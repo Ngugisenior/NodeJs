@@ -9,6 +9,6 @@ export default class HelloWorld{
      * @param {string} name 
      */
     sayHello(name){
-        return(this.greeting+' '+name+'!');
+        console.log(this.greeting+' '+name+'!');
     }
 }

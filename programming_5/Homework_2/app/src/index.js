@@ -1,18 +1,8 @@
-import express from "express";
-import HelloWorld from "./modules/hello-world";
+//const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-const app = express()
-const port = 3000
-
-app.get('/', (request, response) => {
-    response.send('Hello World!')
-});
-
-app.get('/hello/:name', (request, response)=>{
-    let hello = new HelloWorld('Hello');
-    response.send(hello.sayHello(request.params.name));
-})
-
-app.listen(3000, ()=>{
-    console.log('listnening');
+fetch('http://localhost:3000/hello/elvis')
+.then(response=>response.text())
+.then(text=>{
+    console.log(text)
 });

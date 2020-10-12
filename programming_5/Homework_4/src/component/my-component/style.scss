@@ -1,0 +1,10 @@
+.component.MyComponent{
+    
+    .hello{
+        color:red;
+        cursor:pointer;
+        &.clicked{
+            color:green;
+        }
+    }
+}
